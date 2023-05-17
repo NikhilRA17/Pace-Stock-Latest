@@ -1,0 +1,122 @@
+.newsMain {
+  width: 85%;
+  margin: auto;
+  /* height: 100vh; */
+}
+header {
+  height: 60px;
+  /* border: 2px solid red; */
+  display: flex;
+  border-bottom: 5px solid black;
+}
+header span {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  /* display: block; */
+}
+header span h1 {
+  border-radius: 50%;
+  margin-top: 10px;
+  color: white;
+  background: rgb(235, 72, 99);
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  /* border: 2px solid blue; */
+}
+.navItems ul {
+  display: flex;
+}
+.navItems ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+.navItems ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: small;
+}
+.socialSites {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: end;
+}
+.socialSites i {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.mainSection {
+  margin-top: 20px;
+  border-bottom: 5px solid black;
+  padding-bottom: 25px;
+}
+.upper {
+  height: fit-content;
+  display: flex;
+}
+.left {
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  /* border: 2px solid red; */
+}
+.left img {
+  width: 93%;
+  height: 350px;
+}
+.right {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.rightContent {
+  /* border: 2px solid red; */
+  cursor: pointer;
+
+  gap: 25px;
+  cursor: pointer;
+  display: flex;
+  height: 150px;
+}
+.rightContent .image {
+  /* border: 2px solid green; */
+  height: 100%;
+  width: 30%;
+}
+.rightContent .image img {
+  width: 100%;
+  height: 100px;
+}
+.rightContent .info {
+  /* border: 2px solid grey; */
+  width: 65%;
+}
+.lowerSection {
+  margin-top: 25px;
+}
+.lowerSection .articles {
+  display: grid;
+  grid-template: 33% / auto auto auto;
+  /* grid-template: 33% / auto auto; */
+  /* width: 100%; */
+}
+.lowerSection .articles .singleItem {
+  width: 90%;
+  gap: 10px;
+  cursor: pointer;
+  /* height: max-content; */
+}
+.lowerSection .articles .singleItem img {
+  width: 100%;
+  /* height: 200px; */
+}
