@@ -90,10 +90,28 @@ header span h1 {
   }
 
   .singleItem {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
+    width: 100%;
+    border-bottom: 2px solid black;
   }
   .lowerSection .articles {
     display: flex;
     flex-direction: column;
+  }
+  .lowerSection .articles .singleItem img {
+    height: 300px;
+  }
+}
+@media (max-width: 300px) {
+  .navItems ul {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    height: 250px;
+  }
+  header .socialSites {
+    height: 50px;
+    width: 100%;
   }
 }
