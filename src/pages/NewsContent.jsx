@@ -3,7 +3,12 @@ import "../styles/news.css";
 
 const NewsContent = () => {
   const [news, setNews] = useState([]);
+<<<<<<< HEAD
 
+=======
+  // const [main, setMain] = useState([]);
+  // const [sideBar, setSideBar] = useState([]);
+>>>>>>> c7653e64a57892b04bbc176efcc984db91f53d6a
   useEffect(() => {
     const getdata = async () => {
       await fetch(
@@ -12,7 +17,12 @@ const NewsContent = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log(data.articles);
+<<<<<<< HEAD
 
+=======
+          // setMain(data.articles.splice(0, 1));
+          // setSideBar(data.articles.splice(0, 3));
+>>>>>>> c7653e64a57892b04bbc176efcc984db91f53d6a
           setNews(data.articles);
         });
     };
