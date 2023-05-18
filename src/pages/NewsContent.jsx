@@ -3,18 +3,16 @@ import "../styles/news.css";
 
 const NewsContent = () => {
   const [news, setNews] = useState([]);
-  const [main, setMain] = useState([]);
-  const [sideBar, setSideBar] = useState([]);
+
   useEffect(() => {
     const getdata = async () => {
       await fetch(
-        "https://newsapi.org/v2/everything?q=tesla&from=2023-04-17&sortBy=publishedAt&apiKey=c935578757914d02b8765bb69b583e80"
+        "https://newsapi.org/v2/everything?q=tesla&from=2023-04-18&sortBy=publishedAt&apiKey=c935578757914d02b8765bb69b583e80"
       )
         .then((res) => res.json())
         .then((data) => {
           console.log(data.articles);
-          setMain(data.articles.splice(0, 1));
-          setSideBar(data.articles.splice(0, 3));
+
           setNews(data.articles);
         });
     };
@@ -53,36 +51,12 @@ const NewsContent = () => {
           <i className="fa-solid fa-key  fa-xl"></i>{" "}
         </div>
       </header>
-      <section className="mainSection">
-        <h1>Featured Article</h1>
-        <div className="upper">
-          <div className="left">
-            <img src={news[0].urlToImage} alt="" />
-            <p>{news[0].publishedAt}</p>
-            <h1>{news[0].title}</h1>
-            <br />
-            <p>{news[0].content}</p>
-          </div>
-          <div className="right">
-            {sideBar.map((ele, i) => (
-              <div className="rightContent">
-                <div className="image">
-                  <img src={ele.urlToImage} alt="" />
-                </div>
-                <div className="info">
-                  <p>{ele.publishedAt}</p>
-                  <h1>{ele.title}</h1>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
       <section className="lowerSection">
         <h1>Articles</h1>
         <div className="articles">
           {news.map((ele, i) => (
-            <div className="singleItem">
+            <div key={i} className="singleItem">
               <img src={ele.urlToImage} alt="" />
               <p>{ele.publishedAt}</p>
               <h1>{ele.title}</h1>
